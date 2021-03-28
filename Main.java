@@ -5,13 +5,13 @@ import java.util.*;
 class Main{
   public static void main(String[ ] args) {
 
-  VectorND v1 = new VectorND(new double[] {1, 2, 8, 0, 2, 54});
-  VectorND v2 = new VectorND(new double[] {-1, 3, 2, 1});
-  System.out.println(v1.dotProduct(v2));
+  Vector3D v1 = new Vector3D(new double[] {1, 2, 8});
+  Vector3D v2 = new Vector3D(new double[] {-1, 3, 2});
+  System.out.println(v1.crossProduct(v2));
 
-  VectorND v3 = new VectorND(new double[] {1, 2, -8, -1, 1, 0});
-  VectorND v4 = new VectorND(new double[] {-1, -2, 8, 1});
-  System.out.println(v3.dotProduct(v4));
+  Vector3D v3 = new Vector3D(new double[] {1, 2, -8});
+  Vector3D v4 = new Vector3D(new double[] {-1, -2, 8});
+  System.out.println(v3.crossProduct(v4));
 
   }
 }

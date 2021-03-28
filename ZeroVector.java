@@ -2,10 +2,10 @@ public class ZeroVector extends VectorND{
 
   //Constructors
   public ZeroVector(double[] newCoords){
-    super(new double[] {0});
+    super(newCoords);
   }
   public ZeroVector(){
-    super(new double[] {0});
+    super();
   }
   
 }

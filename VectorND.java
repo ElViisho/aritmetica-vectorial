@@ -118,6 +118,5 @@ public class VectorND{
     return dotV;
 
   }
-
   
 }
