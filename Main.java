@@ -13,6 +13,9 @@ class Main{
   Vector3D v4 = new Vector3D(new double[] {-1, -2, 8});
   System.out.println(v3.crossProduct(v4));
 
+  ZeroVector v0 = new ZeroVector(new double[] {1, 4321, 1, 9, 2});
+  System.out.println(v0);
+
   }
 }
 
