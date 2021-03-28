@@ -1,4 +1,4 @@
-// Java program to demonstrate working of Arrays.toString()
+// VectorND Class
 import java.io.*;
 import java.util.*;
 import java.lang.Math.*;

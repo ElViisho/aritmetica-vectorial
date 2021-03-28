@@ -1,3 +1,7 @@
+// Vector3D Class
+import java.io.*;
+import java.util.*;
+
 public class Vector3D extends VectorND{
 
   //Constructors
@@ -23,6 +27,11 @@ public class Vector3D extends VectorND{
     //Declare the new vector to return
     Vector3D newVec = new Vector3D(new double[] {oneCoord, twoCoord, threeCoord}); 
     return newVec;
+  }
+
+  //Test the results by converting them to string for later printing
+  public String toString() {
+    return "Vector3D{" + Arrays.toString(coords) + '}';
   }
   
 }

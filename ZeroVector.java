@@ -1,3 +1,8 @@
+// ZeroVector Class
+import java.io.*;
+import java.util.*;
+
+
 public class ZeroVector extends VectorND{
 
   //Constructors
@@ -12,6 +17,11 @@ public class ZeroVector extends VectorND{
   }
   public ZeroVector(){
     super();
+  }
+
+  //Test the results by converting them to string for later printing
+  public String toString() {
+    return "ZeroVector{" + Arrays.toString(coords) + '}';
   }
   
 }
