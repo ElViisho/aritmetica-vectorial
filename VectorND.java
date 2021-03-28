@@ -76,7 +76,7 @@ public class VectorND{
     return true;
   }
 
-
+  //To check wether two vectors are opposite
   public boolean isOppositeTo(VectorND vector){
     //Get the number of coordinates of the vectors
     int Ncoords1 = this.coords.length;
@@ -98,6 +98,25 @@ public class VectorND{
     }
 
     return true;
+  }
+
+  //To calculate the dot product between two vectors
+  public double dotProduct(VectorND vector){
+    //Get the number of coordinates of the vectors
+    int Ncoords1 = this.coords.length;
+    int Ncoords2 = vector.coords.length;
+    //Assing the longest to work with that
+    int Ncoords = Math.min(Ncoords1, Ncoords2);
+
+    //Declare the vector that will be returned
+    double dotV = 0;
+    //Go through all the coordinates amd sum the product
+    for (int i=0; i<Ncoords; i++){
+      dotV += this.coords[i]*vector.coords[i];
+    }
+
+    return dotV;
+
   }
 
   
