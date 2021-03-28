@@ -64,17 +64,40 @@ public class VectorND{
     return Math.sqrt(length);
   }
 
-
+  //To check wether the vector is a zero vector or not
   public boolean isZeroVector(){
     //Get the number of coordinates of the vector
     int Ncoords = this.coords.length;
-    //For each coordinate, sum to the total
+    //For each coordinate check if its 0 or not
     for (int i=0; i<Ncoords; i++){
       if (this.coords[i] != 0) {return false;}
     }
 
     return true;
+  }
 
+
+  public boolean isOppositeTo(VectorND vector){
+    //Get the number of coordinates of the vectors
+    int Ncoords1 = this.coords.length;
+    int Ncoords2 = vector.coords.length;
+    //Assing the longest to work with that
+    int Ncoords = Math.max(Ncoords1, Ncoords2);
+
+    //For each coordinate check if its opposite or not
+    for (int i=0; i<Ncoords; i++){
+      if (i>Ncoords1-1) {
+        if(vector.coords[i] != 0) {return false;}
+      }
+      else if (i>Ncoords2-1) {
+        if(this.coords[i] != 0) {return false;}
+      }
+      else {
+        if (this.coords[i] != -vector.coords[i]) {return false;}
+      }
+    }
+
+    return true;
   }
 
   
