@@ -5,17 +5,17 @@ import java.util.*;
 class Main{
   public static void main(String[ ] args) {
 
-  VectorND v = new VectorND(new double[] {1, 2, 3, 4});
-  System.out.println(v.toString());
-
   VectorND v1 = new VectorND(new double[] {1, 2, 8, 0, 2, 54});
-  VectorND v2 = new VectorND(new double[] {-1, 3, 2, 1});
+  Vector2D v2 = new Vector2D(new double[] {-1, 3, 2, 1});
+  ZeroVector v0 = new ZeroVector(new double[] {2, 3, 1});
+  Vector3D v3 = new Vector3D();
 
-  double v1l = v1.getLength();
-  double v2l = v2.getLength();
 
-  System.out.println(v1l);
-  System.out.println(v2l);
+  System.out.println(v1.isZeroVector());
+  System.out.println(v2.isZeroVector());
+  System.out.println(v0.isZeroVector());
+  System.out.println(v3.isZeroVector());
+
 
   }
 }

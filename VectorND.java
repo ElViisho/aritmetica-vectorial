@@ -50,18 +50,30 @@ public class VectorND{
 
   }
 
+  //Get the length of the vector
   public double getLength(){
     //Get the number of coordinates of the vector
     int Ncoords = this.coords.length;
 
     double length = 0;
-
+    //For each coordinate, sum to the total
     for (int i=0; i<Ncoords; i++){
       length += Math.pow(this.coords[i], 2);
     }
 
     return Math.sqrt(length);
+  }
 
+
+  public boolean isZeroVector(){
+    //Get the number of coordinates of the vector
+    int Ncoords = this.coords.length;
+    //For each coordinate, sum to the total
+    for (int i=0; i<Ncoords; i++){
+      if (this.coords[i] != 0) {return false;}
+    }
+
+    return true;
 
   }
 
