@@ -1,6 +1,7 @@
 // Java program to demonstrate working of Arrays.toString()
 import java.io.*;
 import java.util.*;
+import java.lang.Math.*;
 
 
 public class VectorND{
@@ -15,25 +16,29 @@ public class VectorND{
     this.coords = new double[0];
   }
 
-
+  //Test the results by converting them to string for later printing
   public String toString() {
     return "VectorND{" + Arrays.toString(coords) + '}';
   }
 
-
+  //add method which sums the vectors, coordinate by coordinate
   public VectorND add(VectorND vector){
-    int length1 = this.coords.length;
-    int length2 = vector.coords.length;
+    //Get the number of coordinates of the vectors
+    int Ncoords1 = this.coords.length;
+    int Ncoords2 = vector.coords.length;
+    //Assing the longest to work with that
+    int Ncoords = Math.max(Ncoords1, Ncoords2);
 
-    int length = (length1 > length2)? length1 : length2;
+    //Declare the vector that will be returned
+    VectorND sumV = new VectorND(new double[Ncoords]);
 
-    VectorND sumV = new VectorND(new double[length]);
-
-    for (int i=0; i<length; i++){
-      if (i>length1-1) {
+    //Go through all the coordinates
+    //if one vector is over, continue with only the other one
+    for (int i=0; i<Ncoords; i++){
+      if (i>Ncoords1-1) {
         sumV.coords[i] = vector.coords[i];
       }
-      else if (i>length2-1) {
+      else if (i>Ncoords2-1) {
         sumV.coords[i] = this.coords[i];
       }
       else {
@@ -44,5 +49,8 @@ public class VectorND{
     return sumV;
 
   }
+
+  
+
   
 }
