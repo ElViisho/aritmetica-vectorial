@@ -50,7 +50,20 @@ public class VectorND{
 
   }
 
-  
+  public double getLength(){
+    //Get the number of coordinates of the vector
+    int Ncoords = this.coords.length;
+
+    double length = 0;
+
+    for (int i=0; i<Ncoords; i++){
+      length += Math.pow(this.coords[i], 2);
+    }
+
+    return Math.sqrt(length);
+
+
+  }
 
   
 }
