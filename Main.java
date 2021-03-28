@@ -8,8 +8,14 @@ class Main{
   VectorND v = new VectorND(new double[] {1, 2, 3, 4});
   System.out.println(v.toString());
 
-  Vector2D v2 = new Vector2D(new double[] {1, 5.1});
-  System.out.println(v2.toString());
+  VectorND v2 = new VectorND(new double[] {1, 2, 8, 0, 2, 54});
+  VectorND v1 = new VectorND(new double[] {-1, 3, 2, 1});
+
+  VectorND v3 = v1.add(v2);
+
+  System.out.println(v3.toString());
+
+
   }
 }
 
